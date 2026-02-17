@@ -1,4 +1,4 @@
-@import url("./common/common.css");
+@import url("../common/common.css");
 
 .hero-image {
   width: 100%;
@@ -221,3 +221,4 @@ hr {
     font-size: 2rem;
   }
 }
+
