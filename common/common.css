@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  z-index: 999;
+}
+
+.logo {
+  width: 14rem;
+  z-index: 999;
+  background-color: none;
+}
+
+.nav-menu {
+  position: absolute;
+  left: 0;
+  background-color: aliceblue;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 10rem;
+  display: none;
+  z-index: 1;
+}
+
+.nav-menu-show {
+  display: flex;
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav-menu ul li a {
+  color: black;
+  font-size: 2rem;
+  position: relative;
+  transition: color 0.3s ease;
+  transform: scale(0.2rem);
+  cursor: pointer;
+}
+
+.nav-menu ul li a:hover {
+  color: blue;
+}
+
+.nav-menu ul li a:hover::after {
+  width: 100%;
+}
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 0%;
+  bottom: -5px;
+  background-color: blue;
+  left: 0;
+  transition: width 0.3s ease;
+  border-radius: 1rem;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav-icon:hover {
+  color: rgb(183, 126, 236);
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.nav-icon i {
+  font-size: 3rem;
+  position: absolute;
+  padding: 2rem;
+}
+
+.btn-jrs {
+  display: none;
+  font-size: 1.5rem;
+  width: 30rem;
+  height: 4rem;
+  background-color: orangered;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn-jrs:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  color: rgba(51, 51, 253, 0.8);
+  text-decoration: underline;
+  font-weight: bolder;
+  text-underline-offset: 0.4rem;
+}
+
+.nav-icon-handaler {
+  width: 100%;
+  position: absolute;
+  height: 20rem;
+  right: 0;
+}
+
+.footer-section {
+  background-color: rgb(24, 22, 22);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  margin-top: 5rem;
+  padding: 1.5rem;
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25rem;
+  margin: 3rem auto;
+  border: 2px solid rgb(0, 174, 255);
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.support div:nth-child(1) {
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.support div:nth-child(1) i {
+  font-size: 1.5rem;
+}
+
+.available {
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.available p,
+.available h2 {
+  font-size: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.about-agency {
+  color: white;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.destinations,
+.quick-links,
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-agency h2,
+.quick-links h2,
+.destinations h2,
+.contact-us h2 {
+  color: white;
+  width: 14rem;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgb(154, 164, 165);
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.about-agency ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about-agency ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.destinations ul,
+.quick-links ul,
+.contact-us ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.destinations ul li,
+.quick-links ul li,
+.contact-us ul li {
+  margin-left: 1rem;
+}
+.about-agency ul li a,
+.destinations ul li a,
+.quick-links ul li a,
+.contact-us ul li a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.destinations ul li a:hover,
+.quick-links ul li a:hover,
+.contact-us ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.contact-us ul li b {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.3rem;
+  text-decoration-color: rgb(156, 152, 152);
+}
+.contact-us ul li span {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.socials {
+  margin: 2.5rem 0;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.socials ul li a {
+  color: white;
+}
+
+.socials ul li a:hover {
+  color: blue;
+  transform: scale(1.1);
+}
+
+.socials ul li a i {
+  font-size: xx-large;
+  box-sizing: border-box;
+  padding: 0.2rem;
+}
+
+.socials ul li a i:hover {
+  transform: scale(1.2);
+}
+
+.footer-text {
+  color: rgb(4, 41, 252);
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo {
+    width: 20%;
+  }
+  .nav-menu {
+    display: flex;
+    position: static;
+    background-color: rgb(196, 196, 196, 0);
+    align-items: center;
+    justify-content: right;
+    padding-top: 1%;
+    width: 89%;
+    padding-right: 2%;
+    z-index: 990;
+  }
+  .nav-menu ul {
+    flex-direction: row;
+    justify-content: space-around;
+    width: max-content;
+  }
+  .nav-icon {
+    display: none;
+  }
+
+  .btn-jrs {
+    display: block;
+    z-index: 990;
+  }
+
+  .nav-icon-handaler {
+    display: none;
+  }
+
+  .support {
+    margin: 5rem auto;
+    width: 30rem;
+  }
+
+  .support div:nth-child(1) i {
+    font-size: xx-large;
+  }
+  .available p,
+  .available h2 {
+    font-size: 2rem;
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+  .about-agency,
+  .destinations,
+  .quick-links,
+  .contact-us {
+    width: 24%;
+  }
+
+  .about-agency h2,
+  .quick-links h2,
+  .destinations h2,
+  .contact-us h2 {
+    margin: 0 0 1rem 0;
+    width: 17rem;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .about-agency ul li a,
+  .destinations ul li a,
+  .quick-links ul li a,
+  .contact-us ul li a {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn-jrs {
+    font-size: 2rem;
+  }
+}
