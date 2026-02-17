@@ -1,1 +1,2 @@
-import "./common/common.js";
+import "../common/common.js";
+
